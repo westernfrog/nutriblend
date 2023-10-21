@@ -7,8 +7,7 @@ import { useSearchParams, usePathname } from "next/navigation";
 
 export default function Meal(props) {
   const router = useSearchParams();
-  const routers = usePathname();
-  console.log(routers);
+
   const [data, setData] = useState(null);
   const [diet, setDiet] = useState(router.get("diet"));
   const [health, setHealth] = useState(router.get("health"));

@@ -9,7 +9,6 @@ export default function Plan() {
 
   const handleDayClick = (day) => {
     setSelectedDay(day);
-    console.log(selectedDay);
   };
   return (
     <>
