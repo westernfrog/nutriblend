@@ -47,7 +47,7 @@ export default function Meal(props) {
                 height={1000}
               />
               <div className="absolute bottom-0 h-96 py-12 w-full px-6 lg:px-8 hover:bg-black/70 bg-black/60 flex flex-col items-start justify-end gap-3 rounded-3xl">
-                <p className="font-semibold text-sm text-neutral-900 bg-neutral-300 rounded-full px-2 py-1">
+                <p className="font-extrabold text-sm text-neutral-900 bg-neutral-300 rounded-full px-3 py-1">
                   {props.q}
                 </p>
                 <h1 className="font-black text-xl lg:text-4xl text-neutral-300 drop-shadow-3xl">
