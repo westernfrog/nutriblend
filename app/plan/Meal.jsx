@@ -34,7 +34,10 @@ export default function Meal(props) {
     <>
       {data ? (
         <div className="col-span-4 mb-12 lg:mb-0">
-          <Link href={data?.hits[props.selectedDay]?.recipe?.url}>
+          <Link
+            target="_blank"
+            href={data?.hits[props.selectedDay]?.recipe?.url}
+          >
             <div className="relative">
               <Image
                 src={data?.hits[props.selectedDay]?.recipe?.image}
