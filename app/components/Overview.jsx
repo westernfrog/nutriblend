@@ -13,7 +13,7 @@ export default function Overview(params) {
           </h1>
           <p className="text-lime-50 font lg:text-2xl lg:px-96 py-5 text-center">
             Wasted a lot of time thinking about what I should make for dinner
-            today Want to watch what I eat but don't know how? Not good at
+            today Want to watch what I eat but don&apos;t know how? Not good at
             pre-planning meals Want to track my weight and calorie intake?
           </p>
           <Link

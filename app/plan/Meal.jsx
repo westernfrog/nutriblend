@@ -29,7 +29,7 @@ export default function Meal(props) {
     };
 
     fetchData();
-  }, []);
+  }, [props.selectedDay, diet, health, cuisineType]);
   return (
     <>
       {data ? (
