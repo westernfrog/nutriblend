@@ -7,7 +7,7 @@ export default function Overview(params) {
   return (
     <>
       <main className="bg-[url('https://images.unsplash.com/photo-1463740839922-2d3b7e426a56')] bg-cover bg-center lg:h-screen lg:w-screen">
-        <div className="backdrop-blur backdrop-brightness-50 h-screen flex flex-col items-center justify-center lg:p-20 p-8">
+        <div className="backdrop-blur bg-black/60 h-screen flex flex-col items-center justify-center lg:p-20 p-8">
           <h1 className="font-bold text-lime-200 lg:text-9xl text-4xl drop-shadow-xl">
             NUTRIBLEND
           </h1>
