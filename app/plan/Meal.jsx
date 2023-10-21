@@ -4,6 +4,7 @@ import { EllipsisHorizontalIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useSearchParams, usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Meal(props) {
   const router = useSearchParams();
@@ -33,37 +34,39 @@ export default function Meal(props) {
     <>
       {data ? (
         <div className="col-span-4 mb-12 lg:mb-0">
-          <div className="relative">
-            <Image
-              src={data?.hits[props.selectedDay]?.recipe?.image}
-              alt="Recipe"
-              className="w-full h-96 object-cover object-center rounded-3xl ring-1 ring-neutral-700"
-              width={1000}
-              height={1000}
-            />
-            <div className="absolute bottom-0 h-96 py-12 w-full px-6 lg:px-8 hover:bg-black/70 bg-black/60 flex flex-col items-start justify-end gap-3 rounded-3xl">
-              <p className="font-semibold text-sm text-neutral-900 bg-neutral-300 rounded-full px-2 py-1">
-                {props.q}
-              </p>
-              <h1 className="font-black text-xl lg:text-4xl text-neutral-300 drop-shadow-3xl">
-                {data?.hits[props.selectedDay]?.recipe?.label}
-              </h1>
+          <Link href={data?.hits[props.selectedDay]?.recipe?.url}>
+            <div className="relative">
+              <Image
+                src={data?.hits[props.selectedDay]?.recipe?.image}
+                alt="Recipe"
+                className="w-full h-96 object-cover object-center rounded-3xl ring-1 ring-neutral-700"
+                width={1000}
+                height={1000}
+              />
+              <div className="absolute bottom-0 h-96 py-12 w-full px-6 lg:px-8 hover:bg-black/70 bg-black/60 flex flex-col items-start justify-end gap-3 rounded-3xl">
+                <p className="font-semibold text-sm text-neutral-900 bg-neutral-300 rounded-full px-2 py-1">
+                  {props.q}
+                </p>
+                <h1 className="font-black text-xl lg:text-4xl text-neutral-300 drop-shadow-3xl">
+                  {data?.hits[props.selectedDay]?.recipe?.label}
+                </h1>
+              </div>
             </div>
-          </div>
-          <div className="my-5">
-            <div className="grid grid-cols-12 items-center text-center gap-4 my-2">
-              {data?.hits[props.selectedDay].recipe?.healthLabels
-                ?.slice(0, 6)
-                .map((item, index) => (
-                  <button
-                    key={index}
-                    className="col-span-6 lg:col-span-4 font-light text-sm text-neutral-300 bg-neutral-900 ring-1 ring-neutral-700 rounded-full p-2 font-light"
-                  >
-                    {item}
-                  </button>
-                ))}
+            <div className="my-5">
+              <div className="grid grid-cols-12 items-center text-center gap-4 my-2">
+                {data?.hits[props.selectedDay].recipe?.healthLabels
+                  ?.slice(0, 6)
+                  .map((item, index) => (
+                    <button
+                      key={index}
+                      className="col-span-6 lg:col-span-4 font-light text-sm text-neutral-300 bg-neutral-900 ring-1 ring-neutral-700 rounded-full p-2 font-light"
+                    >
+                      {item}
+                    </button>
+                  ))}
+              </div>
             </div>
-          </div>
+          </Link>
         </div>
       ) : (
         <>
