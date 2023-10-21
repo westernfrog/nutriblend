@@ -18,7 +18,7 @@ export default function Plan() {
             {week.map((item, index) => (
               <button
                 key={index}
-                className={`col-span-6 text-neutral-300 hover:bg-neutral-800 ring-1 ring-neutral-800 py-2 px-5 text-sm rounded-full transition duration-300 ease-in-out ${
+                className={`col-span-6 text-neutral-300 hover:bg-neutral-800 ring-1 ring-neutral-700 py-2 px-5 text-sm rounded-full transition duration-300 ease-in-out ${
                   selectedDay === index ? "bg-neutral-700" : "bg-neutral-900"
                 }`}
                 onClick={() => handleDayClick(index)}

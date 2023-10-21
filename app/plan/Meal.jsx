@@ -37,7 +37,7 @@ export default function Meal(props) {
             <Image
               src={data?.hits[props.selectedDay]?.recipe?.image}
               alt="Recipe"
-              className="w-full h-96 object-cover object-center rounded-3xl"
+              className="w-full h-96 object-cover object-center rounded-3xl ring-1 ring-neutral-700"
               width={1000}
               height={1000}
             />
@@ -57,7 +57,7 @@ export default function Meal(props) {
                 .map((item, index) => (
                   <button
                     key={index}
-                    className="col-span-6 lg:col-span-4 font-light text-sm text-neutral-300 bg-neutral-900 ring-1 ring-neutral-800 rounded-full p-2 font-light"
+                    className="col-span-6 lg:col-span-4 font-light text-sm text-neutral-300 bg-neutral-900 ring-1 ring-neutral-700 rounded-full p-2 font-light"
                   >
                     {item}
                   </button>
